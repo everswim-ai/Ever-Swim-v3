@@ -62,7 +62,7 @@ export default async (request) => {
           "바로 연습할 수 있는 간단한 드릴을 제시한다."
         ].join("\n"),
         input: question,
-        max_output_tokens: 900
+        max_output_tokens: 2000
       })
     });
 
