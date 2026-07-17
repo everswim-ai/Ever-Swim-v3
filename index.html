@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EverSwim Coach AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="brand">EverSwim</div>
+      <div class="subtitle">Coach AI</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card hero">
+      <h1>내 수영을 더 정확하게</h1>
+      <p>수영 질문을 남기면 EverSwim 기준으로 답변합니다.</p>
+    </section>
+
+    <section class="card">
+      <h2>EverSwim Q&amp;A</h2>
+      <textarea id="question" rows="6" placeholder="예: 접영할 때 팔이 잘 안 올라와요."></textarea>
+      <button id="askBtn">답변 보기</button>
+      <div id="answer" class="answer hidden"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
