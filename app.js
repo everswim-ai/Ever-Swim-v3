@@ -19,27 +19,7 @@ async function askEverSwim() {
     "EverSwim 코치 AI가 질문을 확인하고 있습니다.";
 
   try {
-    const response = await fetch(
-      "/.netlify/functions/chat",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          question: text
-        })
-      }
-    );
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(
-        data?.error ||
-        "서버 오류가 발생했습니다."
-      );
-    }
+    const data = await DataService.askCoach(text);
 
     let result =
       data?.answer ||
